@@ -1,7 +1,7 @@
-# Projet ESGI
+# Lab ESGI
 
-## Kubernetes - Partie 1
-### Class SRC
+## Kubernetes
+### Class SRC4
 
 ---
 
