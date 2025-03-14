@@ -1,1 +1,36 @@
+version: '3.8'
+services:
+  paymybuddy-backend:
+    container_name: paymybuddy-backend
+    image: 9cvo/paymybuddy-backend:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - paymybuddy-vnet
+    environment:
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+    depends_on:
+      - paymybuddy-db
 
+  paymybuddy-db:
+    image: mysql:8.0
+    container_name: paymybuddy-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    networks:
+      - paymybuddy-vnet
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d
+networks:
+  paymybuddy-vnet:
+    driver: bridge
+volumes:
+  db_data:
+    driver: local
