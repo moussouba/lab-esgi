@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymybuddy-backend
+  namespace: lab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paymybuddy-backend
+  template:
+    metadata:
+      labels:
+        app: paymybuddy-backend
+    spec:
+      containers:
+        - name: paymybuddy-backend
+          image: 9cvo/paymybuddy-backend:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: paymybuddy-config
+            - secretRef:
+                name: paymybuddy-secret
