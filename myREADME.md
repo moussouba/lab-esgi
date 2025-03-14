@@ -5,25 +5,31 @@ Les captures se trouvent sans le repertoire screenshot
 # Partie: Orchestration Docker compose
 
 ## Build image docker du backend
+
 ``docker build . -t paymybuddy-backend:latest``
 
 ## Pousser image sur docker hub
 
 Autentification sur docker hub avec identifiant et mot de passe
+
 ``docker login``
 
 Tagguer l'image pour docker hub
+
 ``docker tag paymybuddy-backend:latest 9cvo/paymybuddy-backend:latest``
 
 Pousser l'image sur docker hub
+
 ``docker push 9cvo/paymybuddy-backend:latest``
 
 ## Deployer nos services avec docker compose
 
 Lancer le deploiement
+
 ``docker compose up -d``
 
 Verifier les services deployés
+
 ``docker compose ps``
 
 
@@ -71,12 +77,15 @@ Expose le service en mode ClusterIP accessible uniquement dans le cluster sur le
 ## Deploiement
 
 Create un namespace lab qui contiendra nos ressources
+
 ``kubectl create ns lab``
 
 Appliquer les manifestes crées
+
 ``kubectl create -f k8s/``
 
 Verifier nos ressources créees
+
 ``kubectl get all -n lab``
 
 # Acceder au site
