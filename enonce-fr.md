@@ -7,7 +7,7 @@
 
 ## Contexte
 
-L'entreprise **SUN Data Consulting** est une société de prestation de services informatiques spécialisée dans le Cloud et le DevSecOps. 
+L'entreprise **OK SOFT Consulting** est une société de prestation de services informatiques spécialisée dans le Cloud et le DevSecOps. 
 
 Un de ses clients recherche un consultant ayant des compétences pratiques en DevOps et en intégration d'outils divers. Vous avez été recruté pour répondre à ce besoin. L'entreprise vous présente une application développée en interne. Cependant, les développeurs ne maîtrisent pas les concepts de microservices et ne peuvent pas fournir d’images préconstruites pour un déploiement direct dans un environnement de test ou un POC.
 
