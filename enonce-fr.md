@@ -133,7 +133,7 @@ Vous devrez **pousser vos images** dans un registre Docker et les utiliser dans 
 1. Créer les objets Kubernetes pour chaque composant.
 2. Utiliser des **ConfigMaps et Secrets** pour la gestion des variables.
 3. Assurer la **persistance des données** pour la base MySQL.
-4. Externaliser la configuration de l’application.
+4. Rendre l’application disponible depuis l'extérieur du cluster
 
 💡 **Remarque** : Cette partie implique la création de **manifests Kubernetes** (`Deployment`, `Service`, `ConfigMap`, `Secret`, `PersistentVolumeClaim`...).
 
