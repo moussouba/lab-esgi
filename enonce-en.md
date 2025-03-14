@@ -1,13 +1,13 @@
-# ESGI Project
+# ESGI Lab
 
-## Kubernetes - Part 1
-### SRC Class
+## Kubernetes
+### SRC4 Class
 
 ---
 
 ## Context
 
-The company **SUN Data Consulting** is an IT services company specializing in Cloud and DevSecOps.
+The company **OK SOFT Consulting** is an IT services company specializing in Cloud and DevSecOps.
 
 One of its clients is looking for a consultant with practical skills in DevOps and integration of various tools. You have been recruited to meet this need. The company presents you with an internally developed application. However, the developers are not familiar with microservices concepts and cannot provide pre-built images for direct deployment in a test environment or a POC.
 
